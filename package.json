@@ -13,14 +13,37 @@
   "commands": [
     {
       "name": "note-project-idea",
-      "title": "Note Project Idea",
+      "title": "PPV Note / Action",
       "description": "Notes an idea under a project",
+      "mode": "view"
+    },
+    {
+      "name": "create-project",
+      "title": "PPV Create Project",
+      "description": "Create a new project in Notion",
+      "mode": "view"
+    },
+    {
+      "name": "today-action-items",
+      "title": "PPV Today",
+      "description": "View action items due today or earlier",
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "notionApiKey",
+      "title": "Notion API Key",
+      "description": "Your Notion API integration token",
+      "type": "password",
+      "required": true
+    }
+  ],
   "dependencies": {
+    "@notionhq/client": "^2.2.15",
     "@raycast/api": "^1.85.0",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.11",
